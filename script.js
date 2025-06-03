@@ -97,6 +97,14 @@ function init() {
     document.getElementById("custom").value = "";
     inputError.textContent = "";
     people.style.borderColor = "";
+    resetBtn.addEventListener("mouseover", () => {
+      resetBtn.style.backgroundColor = "hsl(185, 41%, 84%)";
+      resetBtn.style.color = "hsl(183, 100%, 15%)";
+    });
+    resetBtn.addEventListener("mouseout", () => {
+      resetBtn.style.backgroundColor = "hsl(180, 18%, 40%)";
+      resetBtn.style.color = "hsl(183, 85%, 21%)";
+    });
   });
 }
 
