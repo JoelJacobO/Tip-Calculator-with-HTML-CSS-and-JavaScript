@@ -218,8 +218,9 @@ main {
   font-weight: 700;
   background-color: var(--Grey-550);
   border-radius: 0.5rem;
-  border: 3px soild transparent;
+  border: none;
   outline: none;
+  border: none;
   color: var(--Green-800);
   cursor: pointer;
   transition: all 0.2s ease;

@@ -94,4 +94,6 @@ resetBtn.addEventListener("click", () => {
   tipAmount.textContent = "0.00";
   bill.value = people.value = "";
   document.getElementById("custom").value = "";
+  inputError.textContent = "";
+  people.style.borderColor = "";
 });
