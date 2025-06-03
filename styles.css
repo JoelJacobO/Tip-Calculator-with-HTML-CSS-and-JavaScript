@@ -90,6 +90,9 @@ main {
   width: 100%;
   border-radius: 0.5rem;
 }
+.form__container .people {
+  border: 3px solid transparent;
+}
 
 .form__container .people::placeholder,
 .form__container .bill::placeholder {
@@ -215,12 +218,13 @@ main {
   font-weight: 700;
   background-color: var(--Grey-550);
   border-radius: 0.5rem;
-  border: none;
+  border: 3px soild transparent;
   outline: none;
   color: var(--Green-800);
   cursor: pointer;
   transition: all 0.2s ease;
 }
+
 .labels {
   display: flex;
   align-items: center;

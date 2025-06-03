@@ -1,10 +1,13 @@
-// Variables
+//Btn  Variables
 const buttons = document.querySelectorAll(".select-tip-button");
+const resetBtn = document.getElementById("reset");
+
+// Dom variable
 const tipAmount = document.querySelector(".tip__amount");
 const totalAmount = document.querySelector(".total__amount");
-const resetBtn = document.getElementById("reset");
 const inputError = document.querySelector(".error");
 
+// Input Variables
 const bill = document.getElementById("bill");
 const people = document.getElementById("people");
 const form = document.querySelector(".custom__form");
@@ -37,8 +40,7 @@ buttons.forEach((button) => {
       }
       if (messages.length > 0) {
         inputError.textContent = messages.join(",");
-        people.style.borderWidth = "3px";
-        people.style.borderStyle = "solid";
+
         people.style.borderColor = "hsl(13, 70%, 60%)";
       } else {
         func = false;
@@ -66,8 +68,6 @@ form.addEventListener("submit", (e) => {
   }
   if (messages.length > 0) {
     inputError.textContent = messages.join(",");
-    people.style.borderWidth = "3px";
-    people.style.borderStyle = "solid";
     people.style.borderColor = "hsl(13, 70%, 60%)";
   } else {
     func = false;
