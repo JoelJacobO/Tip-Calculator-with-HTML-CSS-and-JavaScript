@@ -11,6 +11,7 @@ const inputError = document.querySelector(".error");
 const bill = document.getElementById("bill");
 const people = document.getElementById("people");
 const form = document.querySelector(".custom__form");
+const x = window.matchMedia("(hover: none)");
 let func = true;
 
 function init() {
@@ -89,8 +90,15 @@ function init() {
       button.style.backgroundColor = "hsl(183, 100%, 15%)";
       button.style.color = "#fff";
     });
-    resetBtn.style.backgroundColor = "hsl(180, 18%, 40%)";
-    resetBtn.style.color = "hsl(183, 85%, 21%)";
+
+    if (x.matches) {
+      resetBtn.style.backgroundColor = "hsl(185, 41%, 84%)";
+      resetBtn.style.color = "hsl(183, 100%, 15%)";
+    } else {
+      resetBtn.style.backgroundColor = "hsl(180, 18%, 40%)";
+      resetBtn.style.color = "hsl(183, 85%, 21%)";
+    }
+
     totalAmount.textContent = "0.00";
     tipAmount.textContent = "0.00";
     bill.value = people.value = "";

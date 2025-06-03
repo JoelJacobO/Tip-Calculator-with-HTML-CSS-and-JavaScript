@@ -157,6 +157,7 @@ main {
   background-color: var(--Grey-200);
   color: var(--Green-900);
 }
+
 .buttons .custom {
   background-color: var(--Grey-50);
   color: var(--Green-900);
@@ -224,6 +225,12 @@ main {
   color: var(--Green-800);
   cursor: pointer;
   transition: all 0.2s ease;
+}
+@media (hover: none) {
+  .tip-value__container button {
+    background-color: var(--Grey-200);
+    color: var(--Green-900);
+  }
 }
 
 .labels {
