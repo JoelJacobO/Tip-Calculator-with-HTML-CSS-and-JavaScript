@@ -97,6 +97,7 @@ function init() {
     document.getElementById("custom").value = "";
     inputError.textContent = "";
     people.style.borderColor = "";
+
     resetBtn.addEventListener("mouseover", () => {
       resetBtn.style.backgroundColor = "hsl(185, 41%, 84%)";
       resetBtn.style.color = "hsl(183, 100%, 15%)";
