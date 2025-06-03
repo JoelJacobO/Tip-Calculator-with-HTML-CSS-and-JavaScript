@@ -1,0 +1,296 @@
+/* space-mono-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/space-mono-v15-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+:root {
+  --Green-400: hsl(172, 67%, 45%);
+  --Green-900: hsl(183, 100%, 15%);
+  --Green-800: hsl(183, 85%, 21%);
+  --Grey-550: hsl(180, 18%, 40%);
+  --Grey-500: hsl(186, 14%, 43%);
+  --Grey-400: hsl(184, 14%, 56%);
+  --Grey-300: hsl(184, 19%, 68%);
+  --Grey-200: hsl(185, 41%, 84%);
+  --Grey-50: hsl(189, 47%, 97%);
+  --White: hsl(0, 100%, 100%);
+  --orange-400: hsl(13, 70%, 60%);
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Space Mono", monospace;
+  background-color: var(--Grey-200);
+}
+.attribution {
+  font-size: 1.2rem;
+  text-align: center;
+  color: var(--Green-800);
+}
+.attribution a {
+  color: var(--Green-800);
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-bottom: 4rem;
+}
+.logo {
+  padding: 5rem 14.4rem 4.1rem;
+}
+
+.tip__container {
+  background-color: var(--White);
+  max-width: 100%;
+  padding: 3.2rem 2.4rem;
+  border-radius: 1.6rem;
+}
+.form__container {
+  width: 100%;
+}
+.form__container .form__control {
+  margin-bottom: 3.2rem;
+}
+.form__container .label {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--Grey-500);
+  margin-bottom: 0.8rem;
+}
+
+.form__container .people,
+.form__container .bill {
+  padding: 0.8rem 1.6rem;
+  text-align: right;
+  background-color: var(--Grey-50);
+  font-size: 2.4rem;
+  line-height: 1.6;
+  color: var(--Green-900);
+  font-weight: 700;
+  font-family: inherit;
+  border: none;
+  outline: none;
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.form__container .people::placeholder,
+.form__container .bill::placeholder {
+  color: var(--Grey-300);
+}
+.form__container .people:focus,
+.form__container .bill:focus {
+  outline: 2px solid var(--Green-400);
+}
+
+.form__container .people::-webkit-outer-spin-button,
+.form__container .people::-webkit-inner-spin-button,
+.form__container .bill::-webkit-outer-spin-button,
+.form__container .bill::-webkit-inner-spin-button,
+.buttons .custom::-webkit-outer-spin-button,
+.buttons .custom::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.form__container input[type="number"] {
+  -moz-appearance: textfield;
+}
+.input-control {
+  position: relative;
+}
+.input__image-dollar,
+.input__image-person {
+  position: absolute;
+  top: 50%;
+  left: 1.6rem;
+  transform: translateY(-50%);
+}
+
+.form__container .buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.6rem;
+}
+
+.buttons button,
+.buttons .custom {
+  padding: 0.8rem 1.6rem;
+  font-size: 2.4rem;
+  line-height: 1.6;
+  font-weight: 700;
+  width: 14.7rem;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  font-family: inherit;
+}
+.buttons button {
+  background-color: var(--Green-900);
+  color: var(--White);
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.buttons button:hover,
+.tip-value__container button:hover {
+  background-color: var(--Grey-200);
+  color: var(--Green-900);
+}
+.buttons .custom {
+  background-color: var(--Grey-50);
+  color: var(--Green-900);
+  text-align: center;
+}
+.buttons .custom::placeholder {
+  color: var(--Grey-550);
+}
+.tip-value__container {
+  background-color: var(--Green-900);
+  border-radius: 1.6rem;
+  padding: 2.4rem;
+}
+
+.tip-value__amount-content,
+.total-value__amount-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.tip-value__amount-content {
+  margin-bottom: 2.4rem;
+}
+.total-value__amount-content {
+  margin-bottom: 3.2rem;
+}
+.tip-value__amount-content p,
+.total-value__amount-content p {
+  font-size: 1.6rem;
+  color: var(--White);
+  line-height: 1.6;
+  font-weight: 700;
+}
+
+.tip-value__amount-content span,
+.total-value__amount-content span {
+  display: inline-block;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--Grey-400);
+  line-height: 1.4;
+}
+.tip-value__amount-content h2 span,
+.total-value__amount-content h2 span,
+.tip-value__amount-content h2,
+.total-value__amount-content h2 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  letter-spacing: -0.67px;
+  color: var(--Green-400);
+}
+.tip-value__container button {
+  width: 100%;
+  padding: 0.8rem 3.2rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-family: inherit;
+  line-height: 1.6;
+  font-weight: 700;
+  background-color: var(--Grey-550);
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  color: var(--Green-800);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.labels {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.labels .error {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--orange-400);
+}
+
+footer {
+  margin-bottom: 2rem;
+}
+@media (width >= 38.75em) {
+  .tip__container {
+    max-width: 60.8rem;
+    margin-inline: auto;
+    padding: 4.8rem 8rem;
+    border-radius: 1.6rem;
+  }
+  .form__container .buttons {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .form__container .form__control {
+    margin-bottom: 2.4rem;
+  }
+  .form__container .form__control:last-child {
+    margin-bottom: 4rem;
+  }
+  .tip-value__container {
+    padding-inline: 3.2rem;
+  }
+  .tip-value__amount-content h2 span,
+  .total-value__amount-content h2 span,
+  .tip-value__amount-content h2,
+  .total-value__amount-content h2 {
+    font-size: 4.8rem;
+  }
+}
+
+@media (width >= 75em) {
+  .tip__container {
+    max-width: 92rem;
+    margin-inline: auto;
+    padding: 3.2rem;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4.8rem;
+  }
+  .buttons button,
+  .buttons .custom {
+    width: 11.6rem;
+  }
+  .tip-value__container {
+    display: flex;
+    flex-direction: column;
+    padding: 2.4rem 3.2rem;
+  }
+  .tip-value__container button {
+    margin-top: auto;
+  }
+  .form__container .form__control {
+    margin-bottom: 4rem;
+  }
+  .form__container .form__control:last-child {
+    margin-bottom: 0;
+  }
+  .logo {
+    padding: 6rem 0 4rem;
+  }
+}
