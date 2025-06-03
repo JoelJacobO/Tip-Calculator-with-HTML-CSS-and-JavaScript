@@ -49,8 +49,16 @@ function init() {
           inputError.textContent = " ";
           people.style.borderColor = "transparent ";
           button.style.backgroundColor = "hsl(172, 67%, 45%)";
-          resetBtn.style.backgroundColor = "hsl(172, 67%, 45%)";
           button.style.color = "hsl(183, 85%, 21%)";
+
+          resetBtn.style.backgroundColor = "hsl(172, 67%, 45%)";
+
+          resetBtn.addEventListener("mouseover", () => {
+            resetBtn.style.backgroundColor = "hsl(185, 41%, 84%)";
+          });
+          resetBtn.addEventListener("mouseout", () => {
+            resetBtn.style.backgroundColor = "hsl(172, 67%, 45%)";
+          });
           calcTip(button.value, numOfPeople);
         }
       }
@@ -77,6 +85,12 @@ function init() {
       people.style.borderColor = "transparent ";
 
       resetBtn.style.backgroundColor = "hsl(172, 67%, 45%)";
+      resetBtn.addEventListener("mouseover", () => {
+        resetBtn.style.backgroundColor = "hsl(185, 41%, 84%)";
+      });
+      resetBtn.addEventListener("mouseout", () => {
+        resetBtn.style.backgroundColor = "hsl(172, 67%, 45%)";
+      });
 
       calcTip(customPercentValue, numOfPeople);
     }
